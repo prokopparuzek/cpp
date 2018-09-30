@@ -3,16 +3,18 @@ using namespace std;
 
 class ahoj {
     public:
-        void pozdrav();
+        string text;
+        string pozdrav(string);
 };
 
-void ahoj::pozdrav() {
-    cout << "Ahoj světe!" << endl;
+string ahoj::pozdrav(string jmeno) {
+    return text + " " + jmeno + "!\n";
 }
 
 int main() {
     ahoj pozdrav;
-    pozdrav.pozdrav();
+    pozdrav.text = "Ahoj";
+    cout << pozdrav.pozdrav("Prokope");
     cin.get();
     return 0;
 }
